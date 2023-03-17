@@ -1,0 +1,52 @@
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServer
+metadata:
+  name: com-example-app-dev
+  namespace: ingress
+spec:
+  host: dev.app.example.com
+  tls:
+    secret: com-example-app-dev-tls
+  routes:
+  - path: /
+    route: default/com-example-app-dev-frontend
+  - path: /monitoring
+    route: monitoring/com-example-app-dev-monitoring
+
+---
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServerRoute
+metadata:
+  name: com-example-app-dev-frontend
+  namespace: default
+spec:
+  host: dev.app.example.com
+  upstreams:
+  - name: frontend
+    service: frontend
+    port: 80
+  subroutes:
+  - path: =/
+    action:
+      redirect:
+        url: ${scheme}://${host}/index.html
+  - path: /
+    action:
+      pass: frontend
+
+---
+apiVersion: k8s.nginx.org/v1
+kind: VirtualServerRoute
+metadata:
+  name: com-example-app-dev-monitoring
+  namespace: monitoring
+spec:
+  host: dev.app.example.com
+  upstreams:
+  - name: monitoring
+    service: monitoring
+    port: 80
+  subroutes:
+  - path: /monitoring
+    action:
+      pass: monitoring

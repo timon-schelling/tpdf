@@ -1,0 +1,12 @@
+[package]
+name = "timpl-decl"
+version = "0.1.0-alpha.1"
+edition = "2021"
+description = "timpl declarative macros. Not meant to be used directly. Use timpl instead."
+authors = ["Timon Schelling"]
+repository = "https://github.com/timon-schelling/timpl"
+documentation = "https://docs.rs/timpl"
+license = "MIT"
+
+[dependencies]
+timpl-proc = { version = "0.1.0-alpha.1", path = "../timpl-proc" }
