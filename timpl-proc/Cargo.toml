@@ -1,6 +1,6 @@
 [package]
 name = "timpl-proc"
-version = "0.1.0-alpha.1"
+version = "0.1.0-alpha.2"
 edition = "2021"
 description = "timpl procedural macros. Not meant to be used directly. Use timpl instead."
 authors = ["Timon Schelling"]
@@ -12,4 +12,4 @@ license = "MIT"
 proc-macro = true
 
 [dependencies]
-timpl-internal = { version = "0.1.0-alpha.1", path = "../timpl-internal" }
+timpl-internal = { version = "0.1.0-alpha.2", path = "../timpl-internal" }

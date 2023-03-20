@@ -1,6 +1,6 @@
 use std::fmt::Display;
 
-use timpl_decl::*;
+use timpl::*;
 
 #[test]
 fn timpl_if() {

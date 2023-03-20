@@ -1,4 +1,4 @@
-use timpl_proc::*;
+use timpl::*;
 
 #[test]
 fn timpl_line() {

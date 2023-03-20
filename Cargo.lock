@@ -4,7 +4,7 @@ version = 3
 
 [[package]]
 name = "timpl"
-version = "0.1.0-alpha.1"
+version = "0.1.0-alpha.2"
 dependencies = [
  "timpl-decl",
  "timpl-internal",
@@ -13,18 +13,18 @@ dependencies = [
 
 [[package]]
 name = "timpl-decl"
-version = "0.1.0-alpha.1"
+version = "0.1.0-alpha.2"
 dependencies = [
  "timpl-proc",
 ]
 
 [[package]]
 name = "timpl-internal"
-version = "0.1.0-alpha.1"
+version = "0.1.0-alpha.2"
 
 [[package]]
 name = "timpl-proc"
-version = "0.1.0-alpha.1"
+version = "0.1.0-alpha.2"
 dependencies = [
  "timpl-internal",
 ]

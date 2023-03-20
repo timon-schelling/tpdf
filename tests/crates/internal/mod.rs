@@ -1,4 +1,4 @@
-use timpl_internal::*;
+use timpl::__internal::*;
 
 #[test]
 fn indent_n() {

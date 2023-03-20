@@ -1,6 +1,6 @@
 [package]
 name = "timpl"
-version = "0.1.0-alpha.1"
+version = "0.1.0-alpha.2"
 edition = "2021"
 description = "A simple, yet powerful, template engine."
 authors = ["Timon Schelling"]
@@ -14,9 +14,9 @@ keywords = ["timpl", "template", "yaml", "html", "text"]
 members = ["timpl-internal", "timpl-proc", "timpl-decl"]
 
 [dependencies]
-timpl-internal = { version = "0.1.0-alpha.1", path = "timpl-internal" }
-timpl-proc = { version = "0.1.0-alpha.1", path = "timpl-proc" }
-timpl-decl = { version = "0.1.0-alpha.1", path = "timpl-decl" }
+timpl-internal = { version = "0.1.0-alpha.2", path = "timpl-internal" }
+timpl-proc = { version = "0.1.0-alpha.2", path = "timpl-proc" }
+timpl-decl = { version = "0.1.0-alpha.2", path = "timpl-decl" }
 
 [lib]
 test = false
