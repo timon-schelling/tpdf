@@ -1,9 +1,0 @@
-[package]
-name = "timpl-internal"
-version = "0.1.0-alpha.2"
-edition = "2021"
-description = "timpl internal. Only meant to be used by generated code. Use timpl instead."
-authors = ["Timon Schelling"]
-repository = "https://github.com/timon-schelling/timpl"
-documentation = "https://docs.rs/timpl"
-license = "MIT"

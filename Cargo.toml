@@ -1,28 +1,14 @@
 [package]
-name = "timpl"
-version = "0.1.0-alpha.2"
+name = "tpdf"
+version = "0.1.0"
 edition = "2021"
-description = "A simple, yet powerful, template engine."
+description = "simple pdf tools"
 authors = ["Timon Schelling"]
-repository = "https://github.com/timon-schelling/timpl"
-documentation = "https://docs.rs/timpl"
+repository = "https://github.com/timon-schelling/tpdf"
+documentation = "https://docs.rs/tpdf"
 license = "MIT"
-categories = ["template-engine", "text-processing"]
-keywords = ["timpl", "template", "yaml", "html", "text"]
-
-[workspace]
-members = ["timpl-internal", "timpl-proc", "timpl-decl"]
+keywords = ["pdf"]
 
 [dependencies]
-timpl-internal = { version = "0.1.0-alpha.2", path = "timpl-internal" }
-timpl-proc = { version = "0.1.0-alpha.2", path = "timpl-proc" }
-timpl-decl = { version = "0.1.0-alpha.2", path = "timpl-decl" }
-
-[lib]
-test = false
-doctest = false
-
-[profile.release]
-strip = true
-lto = true
-codegen-units = 1
+lopdf = { version = "0.31", features = ["pom_parser", "nom_parser"] }
+clap = { version = "4", features = ["default", "unstable-doc"] }
